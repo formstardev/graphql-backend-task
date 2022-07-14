@@ -1,0 +1,30 @@
+type ApiKeyData {
+  apiKey: String
+}
+
+type Commit {
+  sha: String
+  message: String
+  html_url: String
+  committerInfo: CommitterInfo
+  date: String
+}
+
+type CommitterInfo {
+  email: String
+  name: String
+}
+
+type Query {
+  message: String
+  get_commits(sha: String, per_page: Int, page: Int): [Commit]
+}
+
+type Mutation {
+  generate_api_key: ApiKeyData
+}
+
+schema {
+  query: Query
+  mutation: Mutation
+}

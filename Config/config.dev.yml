@@ -1,0 +1,10 @@
+MYSQL_DB_IDENTIFIER: graphql-db
+MYSQL_DB_NAME: graphqlDB
+MYSQL_DB_USERNAME: master
+MYSQL_DB_PASSWORD: pA$$w0rD321
+MYSQL_DB_HOST:
+  Fn::GetAtt: [MySqlRDSInstance, Endpoint.Address]
+MYSQL_DB_PORT:
+  Fn::GetAtt: [MySqlRDSInstance, Endpoint.Port]
+NODE_ENV: dev
+REGION: us-east-1
